@@ -29,14 +29,7 @@ br.addheaders = [
     ('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
 
-print '''\033[1;31m
-   _________ __          __ __
-  /   _____//  |________|__|  | __ ___________
-  \_____  \\\\   __\_  __ \  |  |/ // __ \_  __ \\
-  /        \|  |  |  | \/  |    <\  ___/|  | \/
- /_______  /|__|  |__|  |__|__|_ \\\\___  >__|
-         \/                     \/    \/\033[1;m'''
-#target = raw_input('\033[1;34m[?]\033[1;m Enter the target: ')
+
 target = sys.argv[1]
 if 'http' in target:
     parsed_uri = urlparse(target)
