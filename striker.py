@@ -8,6 +8,7 @@ import requests
 import os
 from urllib import urlencode
 from plugins.DNSDumpsterAPI import DNSDumpsterAPI
+import sys
 params = []
 # Browser
 br = mechanize.Browser()
