@@ -105,7 +105,7 @@ def honeypot(ip_addr):
     try:
         phoney = br.open(honey).read()
         if '0.0' in phoney:
-            print "m[+] Honeypot Probabilty: 0%"
+            print "[+] Honeypot Probabilty: 0%"
         elif '0.1' in phoney:
             print "[+] Honeypot Probabilty: 10%"
         elif '0.2' in phoney:
