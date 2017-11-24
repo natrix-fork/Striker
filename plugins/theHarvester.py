@@ -60,9 +60,9 @@ def start(argv):
         all_emails = []
         all_hosts = []
         virtual = "basic"
-        print '\033[1;97m[>]\033[1;m Initiating 3 intel modules'
+        print '[>] Initiating 3 intel modules'
         
-        print "\033[1;97m[>]\033[1;m Loading Alpha module (1/3)"
+        print "[>] Loading Alpha module (1/3)"
         search = googlesearch.search_google(word, limit, start)
         search.process()
         emails = search.get_emails()
@@ -70,7 +70,7 @@ def start(argv):
         all_emails.extend(emails)
         all_hosts.extend(hosts)
         
-        print "\033[1;97m[>]\033[1;m Beta module deployed (2/3)"
+        print "[>] Beta module deployed (2/3)"
         bingapi = "no"
         search = bingsearch.search_bing(word, limit, start)
         search.process(bingapi)
@@ -79,7 +79,7 @@ def start(argv):
         all_hosts.extend(hosts)
         all_emails.extend(emails)
        
-        print "\033[1;97m[>]\033[1;m Gamma module initiated (3/3)"
+        print "[>] Gamma module initiated (3/3)"
         search = exaleadsearch.search_exalead(word, limit, start)
         search.process()
         emails = search.get_emails()
