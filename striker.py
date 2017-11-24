@@ -171,9 +171,9 @@ def dnsdump(domain):
 def fingerprint(ip_addr):
     try:
         result = br.open('https://www.censys.io/ipv4/%s/raw' % ip_addr).read()
-        match = search(r'&#34;os_description&#34;: &#34;[^<]*&#34;', result)
+        match = search(r'os_description: [^<];', result)
         if match:
-            print '[+] Operating System : ' + match.group().split('n&#34;: &#34;')[1][:-5]
+            print '[+] Operating System : ' + match.group().split(':')[1][:-5]
     except:
          pass
 
